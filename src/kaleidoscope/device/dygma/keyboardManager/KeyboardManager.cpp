@@ -207,12 +207,12 @@ void KeyboardHands::setup()
                                                         if (p.header.device == BLE_DEFY_RIGHT)
                                                         {
                                                             rightConnection[0] = UNKNOWN;
-                                                            rightConnection[1] = UNKNOWN;
+                                                            if (rightConnection[1] == BLE_DEFY_RIGHT) rightConnection[1] = UNKNOWN;
                                                         }
                                                         if (p.header.device == BLE_DEFY_LEFT)
                                                         {
                                                             leftConnection[0] = UNKNOWN;
-                                                            leftConnection[1] = UNKNOWN;
+                                                            if (leftConnection[1] == BLE_DEFY_LEFT) leftConnection[1] = UNKNOWN;
                                                         }
                                                         if (p.header.device == KEYSCANNER_DEFY_LEFT) leftConnection[1] = UNKNOWN;
                                                         if (p.header.device == KEYSCANNER_DEFY_RIGHT) rightConnection[1] = UNKNOWN;
